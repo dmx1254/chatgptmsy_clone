@@ -74,17 +74,17 @@ const NavSheet = () => {
             </div>
           </SheetTitle>
           <SheetDescription>
-            <div className="flex flex-col items-start  h-full  dark:border-secondary">
-              <div className="flex flex-col items-start gap-2 mt-8 pr-4 h-full overflow-y-scroll hideScroll">
+            <div className="flex flex-col items-start h-full dark:border-secondary">
+              <div className="flex flex-col items-start gap-1 mt-8 pr-4 h-full overflow-y-scroll hideScroll">
                 {messages &&
                   messages?.map((m) => (
-                    <div key={m.id} className="flex flex-col">
+                    <div key={m.id} className="flex flex-col items-start">
                       {m.role === "user" ? (
                         <p className="text-black dark:text-white font-bold text-base line-clamp-1">
                           {m.content}
                         </p>
                       ) : (
-                        <span className="text-sm text-secondary-foreground max-w-44 line-clamp-2">
+                        <span className="text-sm text-secondary-foreground line-clamp-2">
                           {m.content}
                         </span>
                       )}
