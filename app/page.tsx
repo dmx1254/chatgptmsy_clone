@@ -7,6 +7,7 @@ import { Moon, SunMoon, Loader, Menu } from "lucide-react";
 import "./style.css";
 import { useEffect, useRef, useState } from "react";
 import CodeInterpretor from "@/components/CodeInterpretor";
+import NavSheet from "@/components/NavSheet";
 
 type Message = {
   content: string;
@@ -62,9 +63,7 @@ export default function Chat() {
   return (
     <div className="flex flex-col pt-10 pb-20 items-center justify-center stretch h-full">
       <div className="flex justify-center fixed top-20 px-4 pt-4 pb-12 bg-background text-center -mt-20 w-full lg:left-56">
-        <span className="absolute mt-1 hidden max-lg:flex ml-8 bg-background top-[25%] left-[0%]">
-          <Menu className="text-black dark:text-white" size={32} />
-        </span>
+        <NavSheet />
         {/* <span className="text-2xl hidden fixed top-20 p-4 text-center max-md:-ml-24 font-extrabold text-black dark:text-white -mt-20" style={{
       width: "calc(50% - 224px)",
        }}>MsyGPT</span> */}
@@ -181,7 +180,7 @@ export default function Chat() {
           <div
             className="flex flex-col items-center justify-center mx-auto gap-2"
             style={{
-              height: "calc(100vh/(3/2))",
+              height: "calc(100vh - 300px)",
             }}
           >
             <div className="flex items-center justify-center rounded-full p-1 border border-muted">
@@ -203,7 +202,7 @@ export default function Chat() {
                 ></path>
               </svg>
             </div>
-            <span className="text-2xl text-gray-600 dark:text-white/90 font-bold">
+            <span className="text-xl xs:text-2xl text-gray-600 dark:text-white/90 font-bold">
               How can I help you today?
             </span>
           </div>

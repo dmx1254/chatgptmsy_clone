@@ -22,7 +22,7 @@ export default function RootLayout({
           <div className="fixed top-0 left-0 w-56 h-screen p-4">
             <Navbar />
           </div>
-          <main className="h-full p-4 w-full lg:ml-44">{children}</main>
+          <main className="p-4 w-full lg:ml-44">{children}</main>
           <HideComponent />
         </div>
       </body>
